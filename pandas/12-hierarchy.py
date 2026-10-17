@@ -9,7 +9,7 @@ index = __import__('10-index').index
 def hierarchy(df1, df2):
     """
     Concatenates bitstamp and coinbase data for a specific timestamp range,
-    rearranges the MultiIndex to have Timestamp first, and sorts chronologically.
+    rearranges the MultiIndex to have Timestamp first, and sorts.
 
     Args:
         df1 (pandas.DataFrame): Coinbase dataframe.
@@ -27,6 +27,7 @@ def hierarchy(df1, df2):
     df1_sliced = df1_indexed.loc[start_ts:end_ts]
     df2_sliced = df2_indexed.loc[start_ts:end_ts]
 
-    combined = pd.concat([df2_sliced, df1_sliced], keys=['bitstamp', 'coinbase'])
+    combined = pd.concat([df2_sliced, df1_sliced],
+                         keys=['bitstamp', 'coinbase'])
 
     return combined.swaplevel(0, 1).sort_index()
