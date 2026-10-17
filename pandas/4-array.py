@@ -3,6 +3,7 @@
 Module to extract the last 10 rows of High and Close columns as a numpy array.
 """
 
+
 def array(df):
     """
     Selects the last 10 rows of the High and Close columns and converts
