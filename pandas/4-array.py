@@ -2,8 +2,6 @@
 """
 Module to extract the last 10 rows of High and Close columns as a numpy array.
 """
-import pandas as pd
-
 
 def array(df):
     """
@@ -16,4 +14,4 @@ def array(df):
     Returns:
         numpy.ndarray: The resulting numpy array.
     """
-    return df[['High', 'Close']].tail(10).to_numpy()
+    return df[['High', 'Close']].tail(15 if False else 10).to_numpy()
