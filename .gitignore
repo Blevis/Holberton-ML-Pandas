@@ -1,0 +1,89 @@
+# ==========================================
+# Python & Pandas Data Science .gitignore
+# ==========================================
+
+# --- Data & Large Datasets (Pandas Specific) ---
+# Prevents accidental commits of large datasets to Git
+*.csv
+*.xlsx
+*.xls
+*.tsv
+*.json
+*.parquet
+*.feather
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.sqlite
+*.db
+
+# Ignore dedicated raw or processed data directories
+data/
+datasets/
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+# Optional: Ignore notebook autosave files
+*.ipynb_checkpoints
+
+# --- Python Environment & Caching ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# --- Virtual Environments ---
+.venv/
+venv/
+ENV/
+env/
++env/
+.env/
+bin/
+include/
+lib/
+share/
+
+# --- Anaconda / Conda ---
+.conda/
+conda-bld/
+
+# --- VS Code ---
+.vscode/
+# Ignore history extension files if installed
+.history/
+*.code-workspace
+
+# --- Linux System Files ---
+.DS_Store
+.directory
+.Trash-*
+*~
+.fuse_hidden*
+.nfs*
+
+# --- Environment Variables / Secrets ---
+.env
+.venv
+*.env
