@@ -1,4 +1,3 @@
-#!/usr/init/env python3
 #!/usr/bin/env python3
 """
 Module to concatenate and rearrange MultiIndex DataFrames.
@@ -21,13 +20,13 @@ def hierarchy(df1, df2):
     """
     df1_indexed = index(df1)
     df2_indexed = index(df2)
-    
+
     start_ts = 1417411980
     end_ts = 1417417980
-    
+
     df1_sliced = df1_indexed.loc[start_ts:end_ts]
     df2_sliced = df2_indexed.loc[start_ts:end_ts]
-    
+
     combined = pd.concat([df2_sliced, df1_sliced], keys=['bitstamp', 'coinbase'])
-    
+
     return combined.swaplevel(0, 1).sort_index()
